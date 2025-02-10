@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Ritika</title>
+    <link href="https://fonts.googleapis.com/css2?family=Calluna&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Splash Screen Styles */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .splash-text {
+            color: white;
+            font-family: 'Calluna', serif;
+            font-size: 3rem;
+            animation: zoomInOut 2s ease-in-out infinite;
+        }
+
+        /* Animations */
+        @keyframes zoomInOut {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes smoke {
+            0% { opacity: 1; filter: blur(0); }
+            100% { opacity: 0; filter: blur(20px); }
+        }
+
+        .smoke-out {
+            animation: smoke 1.5s ease-out forwards;
+        }
+
+        /* Main Content Styles */
+        body {
+            background: #000;
+            color: white;
+            font-family: 'Calluna', serif;
+            overflow-x: hidden;
+        }
+
+        .main-heading {
+            text-align: center;
+            font-size: 3.5rem;
+            margin: 2rem 0;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .option-box {
+            background: #228B22;
+            color: white;
+            padding: 1.5rem 3rem;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 250px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .option-box:hover {
+            background: #FF4500;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
+        }
+
+        /* Milk & Mocha Avatar */
+        #avatar {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        #avatar:active {
+            transform: scale(0.9);
+        }
+
+        @keyframes floatAvatar {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .floating {
+            animation: floatAvatar 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<!-- Time Table Video Button -->
+<div id="video-btn">
+    📽️ Time Table
+</div>
+
+<!-- Video Popup -->
+<div id="video-popup">
+    <div id="video-container">
+        <span id="close-video">&times;</span>
+        <video id="video-player" controls>
+            <source src="timetable.mp4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<style>
+    /* Small Video Button */
+    #video-btn {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background: #ff4500;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0px 0px 10px rgba(255, 69, 0, 0.6);
+    }
+
+    #video-btn:hover {
+        background: #ff6347;
+        transform: scale(1.1);
+    }
+
+    /* Video Popup */
+    #video-popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+
+    #video-container {
+        position: relative;
+        background: black;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    #video-player {
+        width: 600px;
+        max-width: 90vw;
+        border-radius: 10px;
+    }
+
+    /* Close Button */
+    #close-video {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        font-size: 30px;
+        color: white;
+        background: red;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    #close-video:hover {
+        background: darkred;
+    }
+</style>
+
+<script>
+    document.getElementById("video-btn").addEventListener("click", function() {
+        document.getElementById("video-popup").style.display = "flex";
+        document.getElementById("video-player").play();
+    });
+
+    document.getElementById("close-video").addEventListener("click", function() {
+        document.getElementById("video-popup").style.display = "none";
+        document.getElementById("video-player").pause();
+    });
+</script>
+
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <h1 class="splash-text">Welcome Ritika!</h1>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" style="display: none;">
+        <h1 class="main-heading" id="typing-heading"></h1>
+        <script>
+            let text = "A site for your journey!";
+            let index = 0;
+        
+            function typeEffect() {
+                if (index < text.length) {
+                    document.getElementById("typing-heading").innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(typeEffect, 100); // Typing speed (100ms per letter)
+                }
+            }
+        
+            // Ensure typing effect starts after splash screen transition
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    const splashScreen = document.getElementById('splash-screen');
+                    splashScreen.classList.add('smoke-out');
+        
+                    setTimeout(() => {
+                        splashScreen.style.display = 'none';
+                        document.getElementById('main-content').style.display = 'block';
+        
+                        // ✅ Start typing effect AFTER splash screen disappears
+                        typeEffect();
+                    }, 1500);
+                }, 3000);
+            });
+        </script>
+        
+
+        <div class="options-container">
+            <div class="option-box" onclick="location.href='test1.html'">Physics</div>
+            <div class="option-box" onclick="location.href='test2.html'">Chemistry</div>
+            <div class="option-box" onclick="location.href='test3.html'">Maths</div>
+        </div>
+
+        <!-- Milk & Mocha Avatar -->
+        <img id="avatar" class="floating" src="https://media.tenor.com/d2nnuVMvPbcAAAAj/milk-and-mocha-milk-and-mocha-bear.gif" alt="Milk & Mocha">
+    </div>
+
+    <script>
+        // Splash screen transition
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const splashScreen = document.getElementById('splash-screen');
+                splashScreen.classList.add('smoke-out');
+
+                setTimeout(() => {
+                    splashScreen.style.display = 'none';
+                    document.getElementById('main-content').style.display = 'block';
+                }, 1500);
+            }, 3000);
+        });
+
+        // Avatar interaction
+        document.addEventListener('DOMContentLoaded', () => {
+            const avatar = document.getElementById('avatar');
+            avatar.addEventListener('click', () => {
+                alert("Hey Ritika! Keep shining like the rockstar you are! 💖");
+            });
+        });
+    </script>
+</body>
+</html>
+
+

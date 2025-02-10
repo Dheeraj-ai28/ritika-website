@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 1 - Physics, Chemistry, Maths</title>
+    <link href="https://fonts.googleapis.com/css2?family=Calluna&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            color: white;
+            font-family: 'Calluna', serif;
+        }
+
+        /* Navigation Buttons */
+        .nav-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .nav-buttons button {
+            background: #228B22;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            font-size: 1rem;
+        }
+
+        .nav-buttons button:hover {
+            background: #32CD32;
+        }
+
+        /* Splash Screen */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .splash-text {
+            font-size: 3rem;
+            animation: zoomInOut 2s ease-in-out infinite;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: none;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .question-container {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border: 1px solid #333;
+            border-radius: 8px;
+        }
+
+        .question {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #32CD32;
+        }
+
+        .option {
+            background: #228B22;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option:hover {
+            transform: translateX(10px);
+            box-shadow: 2px 2px 10px rgba(50, 205, 50, 0.3);
+        }
+
+        /* Animations */
+        @keyframes zoomInOut {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes smoke {
+            0% { opacity: 1; filter: blur(0); }
+            100% { opacity: 0; filter: blur(20px); }
+        }
+
+        .smoke-out {
+            animation: smoke 1.5s ease-out forwards;
+        }
+    </style>
+</head>
+<!-- View Solutions Button -->
+<div class="solution-container">
+    <a id="solution-btn" href="solutions3.pdf" target="_blank">📄 View Solutions</a>
+</div>
+
+<style>
+    /* Container to place the button at the end */
+    .solution-container {
+        text-align: center;
+        margin-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    /* Button Styling */
+    #solution-btn {
+        display: inline-block;
+        background: #228B22;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: 0.3s;
+        box-shadow: 0px 5px 10px rgba(34, 139, 34, 0.5);
+    }
+
+    /* Hover Effect */
+    #solution-btn:hover {
+        background: #FF4500;
+        transform: scale(1.1);
+        box-shadow: 0px 10px 20px rgba(255, 69, 0, 0.6);
+    }
+</style>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <h1 class="splash-text">Maths</h1>
+    </div>
+ 
+ 
+ <!-- Main Content for Maths -->
+ <div id="maths-content" class="main-content">
+    <h2 style="text-align: center; color: #FF4500; margin-bottom: 2rem;">Section-I: Maths</h2>
+    <!-- Add Maths questions here -->
+</div>
+
+<!-- Question 1 -->
+<div class="question-container">
+<div class="question">1.</div>
+<img src="MATHS1.png" style="max-width: 100%; display: block; margin: 10px auto;">
+<div class="option" onclick="checkAnswer(this, 'C')">(A) 0</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(B) 10</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(C) 20</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(D) 21</div>
+</div>
+
+<!-- Question 2 -->
+<div class="question-container">
+<div class="question">2. ∫e<sup>tan⁻¹x (1 + x + x² ) d(cot⁻¹x) is equal to:</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(A) -e<sup>tan⁻¹x</sup> + c</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(B) e<sup>tan⁻¹x</sup> + c</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(C) -x e<sup>tan⁻¹</sup>x + c</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(D) x e<sup>tan⁻¹x</sup> + c</div>
+</div>
+
+<!-- Question 3 -->
+<div class="question-container">
+<div class="question">3.</div>
+<img src="MATHS3.png" style="max-width: 100%; display: block; margin: 10px auto;">
+<div class="option" onclick="checkAnswer(this, 'A')">(A) </div>
+<div class="option" onclick="checkAnswer(this, 'A')">(B) </div>
+<div class="option" onclick="checkAnswer(this, 'A')">(C) </div>
+<div class="option" onclick="checkAnswer(this, 'A')">(D) </div>
+</div>
+
+<!-- Question 4 -->
+<div class="question-container">
+<div class="question">4. The solution of the differential equation (dy/dx) = -(x² + 3y²)/(3x² + y²), y(1) = 0 is:</div>
+<img src="MATHS4.png" style="max-width: 100%; display: block; margin: 10px auto;">
+<div class="option" onclick="checkAnswer(this, 'C')">(A) </div>
+<div class="option" onclick="checkAnswer(this, 'C')">(B) </div>
+<div class="option" onclick="checkAnswer(this, 'C')">(C) </div>
+<div class="option" onclick="checkAnswer(this, 'C')">(D) </div>
+</div>
+
+<!-- Question 5 -->
+<div class="question-container">
+<div class="question">5.</div>
+<img src="MATHS5.png" style="max-width: 100%; display: block; margin: 10px auto;">
+<div class="option" onclick="checkAnswer(this, 'D')">(A) π²/6</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(B) π²/(12√3)</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(C) π²/(3√3)</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(D) π²/(6√3)</div>
+</div>
+
+<!-- Question 6 -->
+<div class="question-container">
+<div class="question">6. The area bounded by the curves y = x(x – 3)² and y = x is (in sq. units)</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(A) 28</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(B) 32</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(C) 4</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(D) 8</div>
+</div>
+
+<!-- Question 7 -->
+<div class="question-container">
+<div class="question">7. Area enclosed by the curve y= f(x) defined parametrically as x = (1-t²)/(1+t²) and y=2t/(1+t²) is equal to</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(A) π/2 sq. units</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(B) 3π/4 sq. units</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(C) 3π/2 sq. units</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(D) π sq. units</div>
+</div>
+
+<!-- Question 8 -->
+<div class="question-container">
+<div class="question">8. The angle between the line (x-2)/2 = (y+1)/-1 = (z-3)/2 and the plane 3x + 6y – 2z + 5 = 0 is</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(A) cos⁻¹(4/21)</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(B) tan⁻¹(4/21)</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(C) sin⁻¹(6/21)</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(D) sin⁻¹(4/21)</div>
+</div>
+
+<!-- Question 9 -->
+<div class="question-container">
+<div class="question">9. If the vectors AB = 3i + 4k and AC = 5i - 2j + 4k are the sides of a triangle ABC, then the length of the median through A is</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(A) √18</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(B) √72</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(C) √33</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(D) √45</div>
+</div>
+
+<!-- Question 10 -->
+<div class="question-container">
+<div class="question">10.</div>
+<img src="MATHS10.png" style="max-width: 100%; display: block; margin: 10px auto;">
+<div class="option" onclick="checkAnswer(this, 'D')">(A) </div>
+<div class="option" onclick="checkAnswer(this, 'D')">(B) </div>
+<div class="option" onclick="checkAnswer(this, 'D')">(C) </div>
+<div class="option" onclick="checkAnswer(this, 'D')">(D) </div>
+</div>
+
+<!-- Question 11 -->
+<div class="question-container">
+<div class="question">11. </div>
+<img src="MATHS11.png" style="max-width: 100%; display: block; margin: 10px auto;">
+<div class="option" onclick="checkAnswer(this, 'C')">(A) </div>
+<div class="option" onclick="checkAnswer(this, 'C')">(B) </div>
+<div class="option" onclick="checkAnswer(this, 'C')">(C) </div>
+<div class="option" onclick="checkAnswer(this, 'C')">(D)</div>
+</div>
+
+<!-- Question 12 -->
+<div class="question-container">
+<div class="question">12. The distance of the point (1, –2, 3) from the plane x – y + z = 5 measured parallel to a line, whose direction ratios are 2, 3, –6 is :</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(A) 3</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(B) 5</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(C) 2</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(D) 1</div>
+</div>
+
+<!-- Question 13 -->
+<div class="question-container">
+<div class="question">13. In a ΔABC, A : B : C = 3 : 5 : 4 Then (a + b + c√2)  is equal to</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(A) 2b</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(B) 2c</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(C) 3b</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(D) 3a</div>
+</div>
+
+<!-- Question 14 -->
+<div class="question-container">
+<div class="question">14. </div>
+<img src="MATHS14.png" style="max-width: 100%; display: block; margin: 10px auto;">
+<div class="option" onclick="checkAnswer(this, 'A')">(A) 90°</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(B) 60°</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(C) 30°</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(D) None of these</div>
+</div>
+
+<!-- Question 15 -->
+<div class="question-container">
+<div class="question">15. The equation of the circle passing through the point (–1, –3) and touching the line 4x + 3y – 12 = 0 at the point (3, 0) is :-</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(A) x² + y² – 2x + 3y – 3 = 0</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(B) x² + y² + 2x – 3y – 5 = 0</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(C) 2x² + 2y² – 2x + 5y – 8 = 0</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(D) None of these</div>
+</div>
+
+<!-- Question 16 -->
+<div class="question-container">
+<div class="question">16. Let A ≡ (1, 2), B ≡ (3, 4) and let C ≡ (x, y) be a point such that (x – 1) (x – 3) + (y – 2) (y – 4) = 0. If area (ΔABC) = 1 then maximum number of positions of C in the xy-plane is :-</div>
+<div class="option" onclick="checkAnswer(this, 'B')">(A) 2</div>
+<div class="option" onclick="checkAnswer(this, 'B')">(B) 4</div>
+<div class="option" onclick="checkAnswer(this, 'B')">(C) 8</div>
+<div class="option" onclick="checkAnswer(this, 'B')">(D) 10</div>
+</div>
+
+<!-- Question 17 -->
+<div class="question-container">
+<div class="question">17. If one of the diameters of the circle x² + y² – 2x – 6y + 6 = 0 is a chord to the circle with centre (2, 1), then the radius of the circle is -</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(A) √3</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(B) √2</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(C) 3</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(D) 2</div>
+</div>
+
+<!-- Question 18 -->
+<div class="question-container">
+<div class="question">18. </div>
+<img src="MATHS18.png" style="max-width: 100%; display: block; margin: 10px auto;">
+<div class="option" onclick="checkAnswer(this, 'B')">(A) 2</div>
+<div class="option" onclick="checkAnswer(this, 'B')">(B) 4</div>
+<div class="option" onclick="checkAnswer(this, 'B')">(C) 6</div>
+<div class="option" onclick="checkAnswer(this, 'B')">(D) 8</div>
+</div>
+
+<!-- Question 19 -->
+<div class="question-container">
+<div class="question">19. </div>
+<img src="MATHS19.png" style="max-width: 100%; display: block; margin: 10px auto;">
+<div class="option" onclick="checkAnswer(this, 'A')">(A) 0</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(B) 1</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(C) 2</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(D) 3</div>
+</div>
+
+<!-- Question 20 -->
+<div class="question-container">
+<div class="question">20. </div>
+<img src="MATHS20.png" style="max-width: 100%; display: block; margin: 10px auto;">
+<div class="option" onclick="checkAnswer(this, 'C')">(A) 9</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(B) 12</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(C) 18</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(D) 21</div>
+</div>
+
+<h2 style="color: #FF4500;">Section-II: Mathematics</h2>
+
+<div class="question-container">
+<div class="question">1. </div>
+<img src="MATHS21.png" style="max-width: 100%; display: block; margin: 10px auto;">
+<input type="number" id="q1" placeholder="Enter your answer" style="padding: 0.5rem; border-radius: 5px; border: 1px solid #333; background: #111; color: white;">
+<button onclick="checkNumericalAnswer('q1', 1)" style="padding: 0.5rem 1rem; margin-top: 1rem; background: #228B22; border: none; border-radius: 5px; color: white; cursor: pointer;">Check Answer</button>
+</div>
+
+<div class="question-container">
+<div class="question">2.  If y(x) is the solution of the differential equation xdy – (y<SUP>2</SUP> – 4y)dx = 0 for x > 0, y(1) = 2, and the slope of the curve y = y(x) is never zero, then the value of 10y(√2)is  :</div>
+<input type="number" id="q2" placeholder="Enter your answer" style="padding: 0.5rem; border-radius: 5px; border: 1px solid #333; background: #111; color: white;">
+<button onclick="checkNumericalAnswer('q2', 8)" style="padding: 0.5rem 1rem; margin-top: 1rem; background: #228B22; border: none; border-radius: 5px; color: white; cursor: pointer;">Check Answer</button>
+</div>
+
+<div class="question-container">
+<div class="question">3. If the foot of the perpendicular drawn from the point (1, 0, 3) on a line passing through (α, 7, 1) is (5/3, 7/3, 17/3), then α is equal to        :</div>
+<input type="number" id="q3" placeholder="Enter your answer" style="padding: 0.5rem; border-radius: 5px; border: 1px solid #333; background: #111; color: white;">
+<button onclick="checkNumericalAnswer('q3', 4)" style="padding: 0.5rem 1rem; margin-top: 1rem; background: #228B22; border: none; border-radius: 5px; color: white; cursor: pointer;">Check Answer</button>
+</div>
+
+<div class="question-container">
+<div class="question">4. Consider a ΔABC whose sides AB, BC and CA are represented by the straight lines 2x + y = 0, x + py = q and x – y = 3, respectively. The point P is (2, 3) is orthocentre then the value of (p + q)/10.
+</div>
+<input type="number" id="q4" placeholder="Enter your answer" style="padding: 0.5rem; border-radius: 5px; border: 1px solid #333; background: #111; color: white;">
+<button onclick="checkNumericalAnswer('q4', 5)" style="padding: 0.5rem 1rem; margin-top: 1rem; background: #228B22; border: none; border-radius: 5px; color: white; cursor: pointer;">Check Answer</button>
+</div>
+
+<div class="question-container">
+<div class="question">5.  Let a line having direction ratios 1, –4, 2 intersect the lines (x-7)/3 = (y-1)/-1 = (z+2)/1 and x/2 = (y-7)/3 = z/1 at the point A and B. Then (AB)² is equal to ____ .
+
+</div>
+<input type="number" id="q5" placeholder="Enter your answer" style="padding: 0.5rem; border-radius: 5px; border: 1px solid #333; background: #111; color: white;">
+<button onclick="checkNumericalAnswer('q5', 84)" style="padding: 0.5rem 1rem; margin-top: 1rem; background: #228B22; border: none; border-radius: 5px; color: white; cursor: pointer;">Check Answer</button>
+</div>
+
+<script>
+    function checkAnswer(questionId, correctAnswer) {
+        let userAnswer = document.getElementById(questionId).value;
+        if (parseFloat(userAnswer) === correctAnswer) {
+            alert("Correct!");
+        } else {
+            alert("Incorrect! Try again.");
+        }
+    }
+
+     // Splash screen transition
+     window.addEventListener('load', () => {
+            setTimeout(() => {
+                const splashScreen = document.getElementById('splash-screen');
+                splashScreen.classList.add('smoke-out');
+                
+                setTimeout(() => {
+                    splashScreen.style.display = 'none';
+                    showTest('physics'); // Default to Physics test
+                }, 1500);
+            }, 3000);
+        });
+
+        // Function to show the selected test
+        function showTest(subject) {
+            const allContent = document.querySelectorAll('.main-content');
+            allContent.forEach(content => content.style.display = 'none'); // Hide all content
+
+            const selectedContent = document.getElementById(`${subject}-content`);
+            if (selectedContent) {
+                selectedContent.style.display = 'block'; // Show selected content
+            }
+        }
+
+        // Answer checking system for multiple-choice questions
+        function checkAnswer(selectedOption, correctAnswer) {
+            const options = selectedOption.parentElement.children;
+            
+            // Reset all options
+            Array.from(options).forEach(opt => {
+                opt.style.backgroundColor = '#228B22';
+                opt.style.color = 'white';
+            });
+
+            // Mark selected answer
+            if(selectedOption.textContent.includes(correctAnswer)) {
+                selectedOption.style.backgroundColor = '#32CD32';
+                selectedOption.style.color = 'black';
+            } else {
+                selectedOption.style.backgroundColor = '#FF0000';
+                // Find and highlight correct answer
+                Array.from(options).forEach(opt => {
+                    if(opt.textContent.includes(correctAnswer)) {
+                        opt.style.backgroundColor = '#32CD32';
+                        opt.style.color = 'black';
+                    }
+                });
+            }
+        }
+
+        // Answer checking system for numerical questions
+        function checkNumericalAnswer(inputId, correctAnswer) {
+            const input = document.getElementById(inputId);
+            if (parseInt(input.value) === correctAnswer) {
+                input.style.backgroundColor = '#32CD32';
+                input.style.color = 'black';
+            } else {
+                input.style.backgroundColor = '#FF0000';
+            }
+        }
+    </script>
+</body>
+</html>

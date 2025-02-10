@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 1 - Physics, Chemistry, Maths</title>
+    <link href="https://fonts.googleapis.com/css2?family=Calluna&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            color: white;
+            font-family: 'Calluna', serif;
+        }
+
+        /* Navigation Buttons */
+        .nav-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .nav-buttons button {
+            background: #228B22;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            font-size: 1rem;
+        }
+
+        .nav-buttons button:hover {
+            background: #32CD32;
+        }
+
+        /* Splash Screen */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .splash-text {
+            font-size: 3rem;
+            animation: zoomInOut 2s ease-in-out infinite;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: none;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .question-container {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border: 1px solid #333;
+            border-radius: 8px;
+        }
+
+        .question {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #32CD32;
+        }
+
+        .option {
+            background: #228B22;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option:hover {
+            transform: translateX(10px);
+            box-shadow: 2px 2px 10px rgba(50, 205, 50, 0.3);
+        }
+
+        /* Animations */
+        @keyframes zoomInOut {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes smoke {
+            0% { opacity: 1; filter: blur(0); }
+            100% { opacity: 0; filter: blur(20px); }
+        }
+
+        .smoke-out {
+            animation: smoke 1.5s ease-out forwards;
+        }
+    </style>
+</head>
+<!-- View Solutions Button -->
+<div class="solution-container">
+    <a id="solution-btn" href="solutions2.pdf" target="_blank">📄 View Solutions</a>
+</div>
+
+<style>
+    /* Container to place the button at the end */
+    .solution-container {
+        text-align: center;
+        margin-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    /* Button Styling */
+    #solution-btn {
+        display: inline-block;
+        background: #228B22;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: 0.3s;
+        box-shadow: 0px 5px 10px rgba(34, 139, 34, 0.5);
+    }
+
+    /* Hover Effect */
+    #solution-btn:hover {
+        background: #FF4500;
+        transform: scale(1.1);
+        box-shadow: 0px 10px 20px rgba(255, 69, 0, 0.6);
+    }
+</style>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <h1 class="splash-text">Chemistry</h1>
+    </div>
+   
+   
+   
+   
+   <!-- Main Content for Chemistry -->
+    <div id="chemistry-content" class="main-content">
+        <h2 style="text-align: center; color: #FF4500; margin-bottom: 2rem;">Section-I: Chemistry</h2>
+        <!-- Add Chemistry questions here -->
+    </div>
+
+    <!-- Question 1 -->
+<div class="question-container">
+    <div class="question">1. The pH range of most suitable indicator which should be used for titration of NaX (0.1 M, 10 ml) with 0.1 M HCl should be (K<sub>b of X<sup>-1 = 10⁻⁶)</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(A) 2 to 3</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(B) 3 to 5</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(C) 6 to 8</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(D) 8 to 10</div>
+</div>
+
+<!-- Question 2 -->
+<div class="question-container">
+    <div class="question">2. Phenol is heated with chloroform and alcoholic KOH when salicylaldehyde is produced. This reaction is known as</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(A) Fridel–Crafts reaction</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(B) Reimer–Tiemann reaction</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(C) Rosenmund reaction</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(D) Perkin reaction</div>
+</div>
+
+<!-- Question 3 -->
+<div class="question-container">
+    <div class="question">3. When phenyl magnesium bromide reacts with tertiary butanol, the product formed will be:</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(A) Phenol</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(B) Benzene</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(C) Tertiary butyl phenyl ether</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(D) Tertiary butyl benzene</div>
+</div>
+
+<!-- Question 4 -->
+<div class="question-container">
+    <div class="question">4. In which reaction I<sup>st compound acts as nucleophile?</div>
+        <img src="chemistry4.png" style="max-width: 100%; display: block; margin: 10px auto;">
+    <div class="option" onclick="checkAnswer(this, 'B')">(A) </div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(B)</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(C) </div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(D) </div>
+</div>
+
+<!-- Question 5 -->
+<div class="question-container">
+    <div class="question">5. Which of the following reactions is expected to take place by SN¹ mechanism?</div>
+    <img src="chemistry5.png" style="max-width: 100%; display: block; margin: 10px auto;">
+    <div class="option" onclick="checkAnswer(this, 'D')">(A) </div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(B) </div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(C) </div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(D) </div>
+</div>
+
+<!-- Question 6 -->
+<div class="question-container">
+    <img src="chemistry61.png" style="max-width: 100%; display: block; margin: 10px auto;">
+    <div class="question">6. Major product of above reaction is:</div>
+    <img src="chemistry62.png" style="max-width: 100%; display: block; margin: 10px auto;">
+    <div class="option" onclick="checkAnswer(this, 'A')">(A)</div>
+    <div class="option" onclick="checkAnswer(this, 'A')">(B)</div>
+    <div class="option" onclick="checkAnswer(this, 'A')">(C)</div>
+    <div class="option" onclick="checkAnswer(this, 'A')">(D)</div>
+</div>
+
+<!-- Question 7 -->
+<div class="question-container">
+    <div class="question">7. When 1 mol of a real gas absorbs 100 kJ heat at constant pressure of 10 bar, its volume changes from 2L to 2.5 L. What is the internal energy change for the real gas?</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(A) 150 kJ</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(B) 100 kJ</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(C) 99.5 kJ</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(D) 100.5 kJ</div>
+</div>
+
+<!-- Question 8 -->
+<div class="question-container">
+    <div class="question">8. Enthalpy of hydrogenation of one mol benzene to cyclohexane is : Given : Resonance energy of benzene = – 70 kJ/mol Enthalpy of hydrogenation of cyclohexene = – 100 kJ/mol</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(A) –170 kJ mol⁻¹</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(B) –30 kJ mol⁻¹</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(C) –370 kJ mol⁻¹</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(D) –230 kJ mol⁻¹</div>
+    </div>
+    
+    <!-- Question 9 -->
+    <div class="question-container">
+    <div class="question">9. When one mole of an ideal gas is compressed to half of its initial volume & simultaneously heated to twice its initial temperature. The change in entropy (ΔS) is :</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(A) Cᵥln2</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(B) Cₚln2</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(C) Rln2</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(D) (C<sub>v –R) ln2</div>
+    </div>
+    
+    <!-- Question 10 -->
+    <div class="question-container">
+    <div class="question">10. Assume that the decomposition of HNO₃ is 4HNO₃ (g) ⇌ 4NO₂(g) + 2H₂O(g) + O₂(g) and the reaction approaches equilibrium at 400K & 30 atm pressure. At equilibrium the partial pressure of HNO₃ is 2atm. Find Kₚ at 400 K (R = 0.08 ℓ – atm/K–mol)</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(A) 4</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(B) 8</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(C) 16</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(D) 32</div>
+    </div>
+    
+    <!-- Question 11 -->
+    <div class="question-container">
+    <div class="question">11. SO₂(g) + Cl₂(g) ⇋ SO₂Cl₂(g) Backward reaction is endothermic. If some quantity of Cl₂ is added keeping volume of container constant which of the following statement is correct.</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(A) No effect on instantaneous pressure of container</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(B) Temp of container will increase</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(C) Temp of container will decrease</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(D) No effect on temperature of container</div>
+    </div>
+    
+    <!-- Question 12 -->
+    <div class="question-container">
+    <div class="question">12. A certain weak acid has Kₐ = 1 × 10⁻⁴. Calculate the equilibrium constant for its reaction with strong base.</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(A) 10⁶</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(B) 10⁸</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(C) 10¹⁰</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(D) 10⁻¹⁰</div>
+    </div>
+    
+    <!-- Question 13 -->
+    <div class="question-container">
+    <div class="question">13. The compound which undergo nucleophilic substitution fastest would be :</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(A) CHCH<sub>3CONH <sub>2  </div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(B) CH₃CH₂COOCH₃</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(C) CH₃CH₂COCl</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(D) CH₃CH₂COCH₃</div>
+    </div>
+
+    <!-- Question 14 -->
+<div class="question-container">
+    <div class="question">14. The major product U in the following reactions is:</div>
+    <img src="chemistry14.png" style="max-width: 100%; display: block; margin: 10px auto;">
+    <div class="option" onclick="checkAnswer(this, 'B')">(A)</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(B)</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(C)</div>
+    <div class="option" onclick="checkAnswer(this, 'B')">(D)</div>
+    </div>
+    
+    <!-- Question 15 -->
+    <div class="question-container">
+    <div class="question">15. In the following sequence of reactions ‘Z’ will be :</div>
+    <img src="chemistry15.png" style="max-width: 100%; display: block; margin: 10px auto;">
+    <div class="option" onclick="checkAnswer(this, 'C')">(A) Acetic acid</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(B) Acetone</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(C) Methyl amine</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(D) Ethyl amine</div>
+    </div>
+    
+    <!-- Question 16 -->
+    <div class="question-container">
+    <div class="question">16. Reaction correctly matched with major product :</div>
+    <img src="chemistry 16.png" style="max-width: 100%; display: block; margin: 10px auto;">
+    <div class="option" onclick="checkAnswer(this, 'D')">(A)</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(B)</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(C)</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(D)</div>
+    </div>
+    
+    <!-- Question 17 -->
+    <div class="question-container">
+    <div class="question">17. Which of the following term is not applicable for Glucose–galactose pair?</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(A) Isomer</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(B) Epimer</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(C) Anomer</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(D) Stereoisomer</div>
+    </div>
+    
+    <!-- Question 18 -->
+    <div class="question-container">
+    <div class="question">18. The compound 'A' is a complementary base of __________ in DNA strands.</div>
+    <img src="chemistry18.png" style="max-width: 100%; display: block; margin: 10px auto;">
+    <div class="option" onclick="checkAnswer(this, 'C')">(A) Uracil</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(B) Guanine</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(C) Adenine</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(D) Cytosine</div>
+    </div>
+    
+    <!-- Question 19 -->
+    <div class="question-container">
+    <div class="question">19. Which one of the following statements is not true about enzymes?</div>
+    <div class="option" onclick="checkAnswer(this, 'A')">(A) Enzymes are non-specific for a reaction and substrate.</div>
+    <div class="option" onclick="checkAnswer(this, 'A')">(B) Almost all enzymes are proteins.</div>
+    <div class="option" onclick="checkAnswer(this, 'A')">(C) Enzymes work as catalysts by lowering the activation energy of a biochemical reaction.</div>
+    <div class="option" onclick="checkAnswer(this, 'A')">(D) The action of enzymes is temperature and pH specific.</div>
+    </div>
+    
+    <!-- Question 20 -->
+    <div class="question-container">
+    <div class="question">20.</div>
+    <img src="chemistry20.png" style="max-width: 100%; display: block; margin: 10px auto;">
+    <div class="option" onclick="checkAnswer(this, 'C')">(A)</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(B)</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(C)</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(D)</div>
+    </div>
+    
+
+    <!-- Section-II: Numerical Questions -->
+<h2 style="text-align: center; color: #FF4500; margin: 2rem 0;">Section-II: Chemistry</h2>
+
+<!-- Question 1 -->
+<div class="question-container">
+    <div class="question">1. Total moles of HI consumed to complete the reaction :</div>
+    <img src="chemistry21.png" style="max-width: 100%; display: block; margin: 10px auto;">
+    <input type="number" id="q1" placeholder="Enter your answer" style="padding: 0.5rem; border-radius: 5px; border: 1px solid #333; background: #111; color: white;">
+    <button onclick="checkNumericalAnswer('q1', 3)" style="padding: 0.5rem 1rem; margin-top: 1rem; background: #228B22; border: none; border-radius: 5px; color: white; cursor: pointer;">Check Answer</button>
+</div>
+
+<!-- Question 2 -->
+<div class="question-container">
+    <div class="question">2. The number of possible enantiomers (pairs) that can be produced during monochlorination of 2-methyl butane is :</div>
+    <input type="number" id="q2" placeholder="Enter your answer" style="padding: 0.5rem; border-radius: 5px; border: 1px solid #333; background: #111; color: white;">
+    <button onclick="checkNumericalAnswer('q2', 2)" style="padding: 0.5rem 1rem; margin-top: 1rem; background: #228B22; border: none; border-radius: 5px; color: white; cursor: pointer;">Check Answer</button>
+</div>
+
+<!-- Question 3 -->
+<div class="question-container">
+    <div class="question">3. A system undergoes a process in which ΔU = +300J, while absorbing 400J of heat energy and undergoing an expansion against 0.5 bar. What is the change in volume (in L)?</div>
+    <input type="number" id="q3" placeholder="Enter your answer" style="padding: 0.5rem; border-radius: 5px; border: 1px solid #333; background: #111; color: white;">
+    <button onclick="checkNumericalAnswer('q3', 2)" style="padding: 0.5rem 1rem; margin-top: 1rem; background: #228B22; border: none; border-radius: 5px; color: white; cursor: pointer;">Check Answer</button>
+</div>
+
+<!-- Question 4 -->
+<div class="question-container">
+    <div class="question">4. Number of reactions giving either decarboxylation or dehydration or both on heating :</div>
+    <img src="chemistry24.png" style="max-width: 100%; display: block; margin: 10px auto;">
+    <input type="number" id="q4" placeholder="Enter your answer" style="padding: 0.5rem; border-radius: 5px; border: 1px solid #333; background: #111; color: white;">
+    <button onclick="checkNumericalAnswer('q4', 4)" style="padding: 0.5rem 1rem; margin-top: 1rem; background: #228B22; border: none; border-radius: 5px; color: white; cursor: pointer;">Check Answer</button>
+</div>
+
+<!-- Question 5 -->
+<div class="question-container">
+    <div class="question">5.Find the total number of π electrons in cyclic conjugation. Fill your answer as the sum of digits (excluding decimal places) till you get a single-digit answer.</div>
+    <img src="chemistry25.png" style="max-width: 100%; display: block; margin: 10px auto;">
+    <input type="number" id="q5" placeholder="Enter your answer" style="padding: 0.5rem; border-radius: 5px; border: 1px solid #333; background: #111; color: white;">
+    <button onclick="checkNumericalAnswer('q5', 1)" style="padding: 0.5rem 1rem; margin-top: 1rem; background: #228B22; border: none; border-radius: 5px; color: white; cursor: pointer;">Check Answer</button>
+</div>
+
+<script>
+    function checkAnswer(questionId, correctAnswer) {
+        let userAnswer = document.getElementById(questionId).value;
+        if (parseFloat(userAnswer) === correctAnswer) {
+            alert("Correct!");
+        } else {
+            alert("Incorrect! Try again.");
+        }
+    }
+
+     // Splash screen transition
+     window.addEventListener('load', () => {
+            setTimeout(() => {
+                const splashScreen = document.getElementById('splash-screen');
+                splashScreen.classList.add('smoke-out');
+                
+                setTimeout(() => {
+                    splashScreen.style.display = 'none';
+                    showTest('physics'); // Default to Physics test
+                }, 1500);
+            }, 3000);
+        });
+
+        // Function to show the selected test
+        function showTest(subject) {
+            const allContent = document.querySelectorAll('.main-content');
+            allContent.forEach(content => content.style.display = 'none'); // Hide all content
+
+            const selectedContent = document.getElementById(`${subject}-content`);
+            if (selectedContent) {
+                selectedContent.style.display = 'block'; // Show selected content
+            }
+        }
+
+        // Answer checking system for multiple-choice questions
+        function checkAnswer(selectedOption, correctAnswer) {
+            const options = selectedOption.parentElement.children;
+            
+            // Reset all options
+            Array.from(options).forEach(opt => {
+                opt.style.backgroundColor = '#228B22';
+                opt.style.color = 'white';
+            });
+
+            // Mark selected answer
+            if(selectedOption.textContent.includes(correctAnswer)) {
+                selectedOption.style.backgroundColor = '#32CD32';
+                selectedOption.style.color = 'black';
+            } else {
+                selectedOption.style.backgroundColor = '#FF0000';
+                // Find and highlight correct answer
+                Array.from(options).forEach(opt => {
+                    if(opt.textContent.includes(correctAnswer)) {
+                        opt.style.backgroundColor = '#32CD32';
+                        opt.style.color = 'black';
+                    }
+                });
+            }
+        }
+
+        // Answer checking system for numerical questions
+        function checkNumericalAnswer(inputId, correctAnswer) {
+            const input = document.getElementById(inputId);
+            if (parseInt(input.value) === correctAnswer) {
+                input.style.backgroundColor = '#32CD32';
+                input.style.color = 'black';
+            } else {
+                input.style.backgroundColor = '#FF0000';
+            }
+        }
+    </script>
+</body>
+</html>

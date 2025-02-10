@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 1 - Physics, Chemistry, Maths</title>
+    <link href="https://fonts.googleapis.com/css2?family=Calluna&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            color: white;
+            font-family: 'Calluna', serif;
+        }
+
+        /* Navigation Buttons */
+        .nav-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .nav-buttons button {
+            background: #228B22;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            font-size: 1rem;
+        }
+
+        .nav-buttons button:hover {
+            background: #32CD32;
+        }
+
+        /* Splash Screen */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .splash-text {
+            font-size: 3rem;
+            animation: zoomInOut 2s ease-in-out infinite;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: none;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .question-container {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border: 1px solid #333;
+            border-radius: 8px;
+        }
+
+        .question {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #32CD32;
+        }
+
+        .option {
+            background: #228B22;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option:hover {
+            transform: translateX(10px);
+            box-shadow: 2px 2px 10px rgba(50, 205, 50, 0.3);
+        }
+
+        /* Animations */
+        @keyframes zoomInOut {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes smoke {
+            0% { opacity: 1; filter: blur(0); }
+            100% { opacity: 0; filter: blur(20px); }
+        }
+
+        .smoke-out {
+            animation: smoke 1.5s ease-out forwards;
+        }
+    </style>
+</head>
+<!-- View Solutions Button -->
+<div class="solution-container">
+    <a id="solution-btn" href="solutions.pdf" target="_blank">📄 View Solutions</a>
+</div>
+
+<style>
+    /* Container to place the button at the end */
+    .solution-container {
+        text-align: center;
+        margin-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    /* Button Styling */
+    #solution-btn {
+        display: inline-block;
+        background: #228B22;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: 0.3s;
+        box-shadow: 0px 5px 10px rgba(34, 139, 34, 0.5);
+    }
+
+    /* Hover Effect */
+    #solution-btn:hover {
+        background: #FF4500;
+        transform: scale(1.1);
+        box-shadow: 0px 10px 20px rgba(255, 69, 0, 0.6);
+    }
+</style>
+
+
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <h1 class="splash-text">Physics</h1>
+    </div>
+
+
+    <!-- Main Content for Physics -->
+    <div id="physics-content" class="main-content">
+        <!-- Section-I: Multiple Choice Questions -->
+        <h2 style="text-align: center; color: #FF4500; margin-bottom: 2rem;">Section-I: Physics</h2>
+
+        <!-- Question 1 -->
+        <div class="question-container">
+            <div class="question">1.  Two balls having mass 2 kg and 3 kg are
+                approaching each other with velocities 3m/s and 2
+                m/s respectively on the horizontal frictionless
+                surface. They undergo a head on elastic collision.
+                Find out the maximum potential energy of
+                deformation</div>
+            <div class="option" onclick="checkAnswer(this, 'C')">(A) zero</div>
+            <div class="option" onclick="checkAnswer(this, 'C')">(B) 12.5 J</div>
+            <div class="option" onclick="checkAnswer(this, 'C')">(C) 15 J</div>
+            <div class="option" onclick="checkAnswer(this, 'C')">(D) none of these</div>
+        </div>
+ <!-- Question 2 -->
+ <div class="question-container">
+    <div class="question">2. Choose the incorrect statement for the system:</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(A)  The net momentum of the system, in the
+        centre of mass frame will be zero</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(B) The kinetic energy of the system in center of
+        mass frame will be minimum...</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(C) In the presence  of non-zero impulsive external
+        force for the system, we cannot conserve the
+        momentum of the system...</div>
+    <div class="option" onclick="checkAnswer(this, 'D')">(D) In the presence  of non-zero external force for
+        the system, it might not be possible to
+        conserve the mechanical energy...</div>
+</div>
+
+<!-- Question 3 -->
+<div class="question-container">
+    <div class="question">3.  A transverse sinusoidal wave moves along a string
+        in the positive x direction. In figure (I)
+        displacement of particle at P as a function of time
+        is given and in figure (II) at a particular time t, the
+        snap shot of wave is shown. The wave velocity
+        (cm/s) and velocity of particle at P (cm/s) will be :</div>
+        <img src="physics3.jpg.png" style="max-width: 100%; display: block; margin: 10px auto;">
+    <div class="option" onclick="checkAnswer(this, 'C')">(A) 1 i , −3π j^ ^</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(B) 1 i , 3π j^ ^</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(C) 1 i , 2π j^ ^</div>
+    <div class="option" onclick="checkAnswer(this, 'C')">(D) −1 i , −2π j^ ^</div>
+</div>
+
+<!-- Question 4 -->
+<div class="question-container">
+<div class="question">4. A sonometer wire vibrates with tuning fork of frequency 400 Hz.When the support S of
+    sonometer wire is moved by a distance of 25cm, it
+    again resonates with the given tuning fork. If mass
+    of 2 kg was suspended by the wire find mass per
+    unit length of wire : (There is no resonance in
+    between)..</div>
+    <img src="physics4.jpg.png" style="max-width: 100%; display: block; margin: 10px auto;">
+
+<div class="option" onclick="checkAnswer(this, 'A')">(A) 0.5 gm/m</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(B) 1 gm/m</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(C) 1.5 gm/m</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(D) 2 gm/m</div>
+</div>
+
+<!-- Question 5 -->
+<div class="question-container">
+<div class="question">5. Four tuning forks of frequencies 200, 201, 204 and 206 Hz  are sounded together. The beat frequency
+    will be</div>
+<div class="option" onclick="checkAnswer(this, 'B')">(A) 6</div>
+<div class="option" onclick="checkAnswer(this, 'B')">(B) 12</div>
+<div class="option" onclick="checkAnswer(this, 'B')">(C) 15</div>
+<div class="option" onclick="checkAnswer(this, 'B')">(D) None of these</div>
+</div>
+
+<!-- Question 6-20 -->
+<div class="question-container">
+<div class="question">6. A train moving at a speed of  220 ms^-1 towards a
+    stationary man, emits a sound of frequency 1000
+    Hz. The frequency of the sound detected by the
+    man (speed of sound in air is 330 ms ).</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(A) 5000 Hz</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(B) 3000 Hz</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(C) 3500 Hz</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(D) 4000 Hz</div>
+</div>
+
+<div class="question-container">
+<div class="question">7. A closed organ pipe and an open organ pipe have
+    their first overtones identical in frequency. Their
+    length are in the ratio ...</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(A) 1 : 2</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(B) 2 : 3</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(C) 3 : 4</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(D) 4 : 5</div>
+</div>
+
+<div class="question-container">
+<div class="question">8. A ball is rolling on the ground. The ratio of speed
+    at P and speed at Q is</div>
+    <img src="physics8.jpg.png" style="max-width: 100%; display: block; margin: 10px auto;">
+<div class="option" onclick="checkAnswer(this, 'A')">(A) 2 : √2</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(B) 2 : 1</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(C) 2√2 : 1</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(D) 1 : 2</div>
+</div>
+
+<!-- Question 9 -->
+<div class="question-container">
+<div class="question">9. A uniform rod of mass m and length is connected with two ideal strings from ends  of rod as shown in
+    figure, if tensions in strings are T & T
+    respectively then</div>
+    <img src="physics9.jpg.png" style="max-width: 100%; display: block; margin: 10px auto;">
+
+<div class="option" onclick="checkAnswer(this, 'D')">(A) T > 1/2 mg</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(B) T > 1/2 mg</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(C) T < 1/2 mg</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(D) T = T = 1/2 mg</div>
+</div>
+
+<!-- Question 10 -->
+<div class="question-container">
+<div class="question">10. A ring of mass M and radius R is at rest at the top of an incline as shown. The ring rolls down the
+    plane without slipping. When the ring reaches
+    bottom, its angular momentum about its center of
+    mass is</div>
+    <img src="physics10.jpg.png" style="max-width: 100%; display: block; margin: 10px auto;">
+
+<div class="option" onclick="checkAnswer(this, 'A')">(A) MR√gh</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(B) MR√2gh</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(C) MR√gh/2</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(D) None of these</div>
+</div>
+
+<!-- Question 11 -->
+<div class="question-container">
+<div class="question">11. A particle executes a simple harmonic motion of time period T. The time taken by the particle from its mean position to half the amplitude will be :-</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(A) T/4</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(B) T/8</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(C) T/12</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(D) 3T/4</div>
+</div>
+
+<!-- Question 12 -->
+<div class="question-container">
+<div class="question">12. In the shown arrangement, the coefficient of friction between the blocks is µ and no friction between ground surface and block 2m. The blocks are displaced slightly and released. They move together without slipping on each other. The time period will be :-</div>
+<img src="physics12.jpg.png" style="max-width: 100%; display: block; margin: 10px auto;">
+<div class="option" onclick="checkAnswer(this, 'A')">(A) 2π√(m/k)</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(B) 2π√(3m/2k)</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(C) 2π√(2m/3k)</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(D) 2π√(9m/2k)</div>
+</div>
+
+<!-- Question 13 -->
+<div class="question-container">
+<div class="question">13. The intensity of light from a source is 500/π W/m². Find the amplitude of electric field in this wave.</div>
+<div class="option" onclick="checkAnswer(this, 'B')">(A) √3 × 10² N/C</div>
+<div class="option" onclick="checkAnswer(this, 'B')">(B) 2√3 × 10² N/C</div>
+<div class="option" onclick="checkAnswer(this, 'B')">(C) √3/2 × 10² N/C</div>
+<div class="option" onclick="checkAnswer(this, 'B')">(D) 2√3 × 10¹ N/C</div>
+</div>
+
+<!-- Question 14 -->
+<div class="question-container">
+<div class="question">14. A plane electromagnetic wave travelling along the X-direction has a wavelength of 3mm. The variation in the electric field occurs in the Y-direction with an amplitude 66Vm⁻¹. The equation for the electric and magnetic fields as a function of x and t are respectively.</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(A) E  = 33 cos π  × 10¹¹(t − x/c) ; B = 1.1 × 10⁻⁷ cos π  × 10¹¹(t − x/c)</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(B) E  = 11 cos 2π  × 10¹¹(t − x/c) ; B = 1.1 × 10⁻⁷ cos 2π  × 10¹¹(t − x/c)</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(C) E  = 33 cos π  × 10¹¹(t − x/c) ; B = 1.1 × 10⁻⁷ cos π  × 10¹¹(t − x/c)</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(D) E  = 66 cos 2π  × 10¹¹(t − x/c) ; B = 2.2 × 10⁻⁷ cos 2π  × 10¹¹(t − x/c)</div>
+</div>
+
+<!-- Question 15 -->
+<div class="question-container">
+<div class="question">15. Certain plane wavefronts are shown in figure. The refractive index of medium is</div>
+<img src="physics15.jpg.png" style="max-width: 100%; display: block; margin: 10px auto;">
+<div class="option" onclick="checkAnswer(this, 'A')">(A) 2</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(B) 4</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(C) 1.5</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(D) Cannot be determined</div>
+</div>
+
+<!-- Question 16 -->
+<div class="question-container">
+<div class="question">16. A monochromatic beam of light falls on Young's double slit experiment apparatus as shown in figure. A thin sheet of glass is inserted in front of lower slit S. (λ = 600 nm is wavelength of light in vacuum). If zero order bright fringe (corresponding to zero phase difference) is obtained on screen at O, then</div>
+<img src="physics16.jpg.png" style="max-width: 100%; display: block; margin: 10px auto;">
+<div class="option" onclick="checkAnswer(this, 'A')">(A) (μ − 1) t = d sin θ</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(B) (μ − 1) t = d cos θ</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(C) μt = dθ</div>
+<div class="option" onclick="checkAnswer(this, 'A')">(D) (μ − 1) t = (d sin θ)/λ =t</div>
+</div>
+
+<!-- Question 17 -->
+<div class="question-container">
+<div class="question">17. The β rays which are emitted from a radioactive material are :-</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(A) electro - magnetic radiations</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(B) orbital electrons</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(C) electrons or positrons emitted by a nucleons</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(D) neutral particle emitted by nucleons</div>
+</div>
+
+<!-- Question 18 -->
+<div class="question-container">
+<div class="question">18. Two particles of mass m and 2m moving in opposite direction collide head on. They have same de-Broglie wavelength before collision. After the collision :-</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(A) If e = 1, de-Broglie wavelength of m is greater than that of 2m.</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(B) If e = 1, de-Broglie wavelength of 2m is greater than that of m.</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(C) The de-Broglie wavelength of m increases if e = 1.</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(D) The de-Broglie wavelength of 2m remains same if e = 1.</div>
+</div>
+
+<!-- Question 19 -->
+<div class="question-container">
+<div class="question">19 The binding energies of the nuclei of He, Li, C & N are 28, 52, 90, 98 Mev respectively. Which of these is most stable?</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(A) He</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(B) Li</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(C) C</div>
+<div class="option" onclick="checkAnswer(this, 'C')">(D) N</div>
+</div>
+
+<!-- Question 20 -->
+<div class="question-container">
+<div class="question">20. For photoelectric emission from certain metal the cut-off frequency is n. If radiation of frequency 2n impinges on the metal plate, the maximum possible velocity of the emitted electron will be (m is the electron mass) :</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(A) √(2hn/m)</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(B) √(hn/(2m))</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(C) √(hn/m)</div>
+<div class="option" onclick="checkAnswer(this, 'D')">(D) √(2hn/m)</div>
+</div>
+
+
+
+
+<!-- Section-II: Numerical Questions -->
+<h2 style="text-align: center; color: #FF4500; margin: 2rem 0;">Section-II: Physics</h2>
+
+<!-- Question 21 -->
+<div class="question-container">
+    <div class="question">21. The minimum energy of an incident electron necessary for ionization of atom of hydrogen is equal to W0. Find minimum initial energy W (= αW 0) of singly ionized incident helium atom, necessary for ionization of stationary hydrogen atom. Write the value of α in OMR sheet.</div>
+    <input type="number" id="q21" placeholder="Enter your answer" style="padding: 0.5rem; border-radius: 5px; border: 1px solid #333; background: #111; color: white;">
+    <button onclick="checkNumericalAnswer('q21', 5)" style="padding: 0.5rem 1rem; margin-top: 1rem; background: #228B22; border: none; border-radius: 5px; color: white; cursor: pointer;">Check Answer</button>
+</div>
+
+<!-- Question 22 -->
+<div class="question-container">
+    <div class="question">22. The work functions of Silver and sodium are 4.6 and 2.3 eV, respectively. The ratio of the slope of the stopping potential versus frequency plot for Silver to that of Sodium is.</div>
+    <input type="number" id="q22" placeholder="Enter your answer" style="padding: 0.5rem; border-radius: 5px; border: 1px solid #333; background: #111; color: white;">
+    <button onclick="checkNumericalAnswer('q22', 1)" style="padding: 0.5rem 1rem; margin-top: 1rem; background: #228B22; border: none; border-radius: 5px; color: white; cursor: pointer;">Check Answer</button>
+</div>
+
+<!-- Question 23 -->
+<div class="question-container">
+<div class="question">23. One slit of a Young's experiment is covered by a glass plate (μ = 1.4) and the other by another glass plate (μ2 = 1.7) of the same thickness. The point of central maxima on the screen, before the plates were introduced, is now occupied by the third bright fringe. Find the thickness of the plates (in µm), the wavelength of light used is 4000 Å.</div>
+<input type="number" id="q3" placeholder="Enter your answer" style="padding: 0.5rem; border-radius: 5px; border: 1px solid #333; background: #111; color: white;">
+<button onclick="checkNumericalAnswer('q3', 4)" style="padding: 0.5rem 1rem; margin-top: 1rem; background: #228B22; border: none; border-radius: 5px; color: white; cursor: pointer;">Check Answer</button>
+</div>
+
+<!-- Question 24 -->
+<div class="question-container">
+<div class="question">24. A sound level meter placed in front of the loudspeaker of a 60W audio system reads 70dB. All else being equal, when placed in front of a 120W system, the meter will read ('x' in dB). Write x + 7/10 as your answer. (x is in nearest integer and log 2 = 0.30).</div>
+<input type="number" id="q4" placeholder="Enter your answer" style="padding: 0.5rem; border-radius: 5px; border: 1px solid #333; background: #111; color: white;">
+<button onclick="checkNumericalAnswer('q4', 8)" style="padding: 0.5rem 1rem; margin-top: 1rem; background: #228B22; border: none; border-radius: 5px; color: white; cursor: pointer;">Check Answer</button>
+</div>
+
+<!-- Question 25 -->
+<div class="question-container">
+<div class="question">25. A circular disc suspended from a torsional wire oscillates with a time period T when twisted by a small angle θ from equilibrium and released. If another disc of the same material but twice the radius and one-fourth thickness is made to oscillate (alone) with the same wire, its time period is found to be nT. Write the value of n.</div>
+<img src="physics25.jpg.png" style="max-width: 100%; display: block; margin: 10px auto;">
+<input type="number" id="q5" placeholder="Enter your answer" style="padding: 0.5rem; border-radius: 5px; border: 1px solid #333; background: #111; color: white;">
+<button onclick="checkNumericalAnswer('q5', 2)" style="padding: 0.5rem 1rem; margin-top: 1rem; background: #228B22; border: none; border-radius: 5px; color: white; cursor: pointer;">Check Answer</button>
+</div>
+
+
+
+
+</div>
+        <!-- Add more questions as needed -->
+    </div>
+
+
+    <script>
+        function checkAnswer(questionId, correctAnswer) {
+            let userAnswer = document.getElementById(questionId).value;
+            if (parseFloat(userAnswer) === correctAnswer) {
+                alert("Correct!");
+            } else {
+                alert("Incorrect! Try again.");
+            }
+        }
+
+        // Splash screen transition
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const splashScreen = document.getElementById('splash-screen');
+                splashScreen.classList.add('smoke-out');
+                
+                setTimeout(() => {
+                    splashScreen.style.display = 'none';
+                    showTest('physics'); // Default to Physics test
+                }, 1500);
+            }, 3000);
+        });
+
+        // Function to show the selected test
+        function showTest(subject) {
+            const allContent = document.querySelectorAll('.main-content');
+            allContent.forEach(content => content.style.display = 'none'); // Hide all content
+
+            const selectedContent = document.getElementById(`${subject}-content`);
+            if (selectedContent) {
+                selectedContent.style.display = 'block'; // Show selected content
+            }
+        }
+
+        // Answer checking system for multiple-choice questions
+        function checkAnswer(selectedOption, correctAnswer) {
+            const options = selectedOption.parentElement.children;
+            
+            // Reset all options
+            Array.from(options).forEach(opt => {
+                opt.style.backgroundColor = '#228B22';
+                opt.style.color = 'white';
+            });
+
+            // Mark selected answer
+            if(selectedOption.textContent.includes(correctAnswer)) {
+                selectedOption.style.backgroundColor = '#32CD32';
+                selectedOption.style.color = 'black';
+            } else {
+                selectedOption.style.backgroundColor = '#FF0000';
+                // Find and highlight correct answer
+                Array.from(options).forEach(opt => {
+                    if(opt.textContent.includes(correctAnswer)) {
+                        opt.style.backgroundColor = '#32CD32';
+                        opt.style.color = 'black';
+                    }
+                });
+            }
+        }
+
+        // Answer checking system for numerical questions
+        function checkNumericalAnswer(inputId, correctAnswer) {
+            const input = document.getElementById(inputId);
+            if (parseInt(input.value) === correctAnswer) {
+                input.style.backgroundColor = '#32CD32';
+                input.style.color = 'black';
+            } else {
+                input.style.backgroundColor = '#FF0000';
+            }
+        }
+    </script>
+</body>
+</html>
